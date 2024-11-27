@@ -394,7 +394,7 @@ async def get_readable_message(
                 )
     button = buttons.build_menu(8)
     msg += (
-        "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
+        "──────────────────\n"
         f"<b>CPU</b>: {cpu_percent()}% | "
         f"<b>FREE</b>: {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}\n"
         f"<b>RAM</b>: {virtual_memory().percent}% | "
