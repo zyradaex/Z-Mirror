@@ -202,7 +202,7 @@ async def start(client, message):
     ):
         start_string = "Bot Started.\n" \
                        "Now I will send all of your stuffs here.\n" \
-                       "<code>Redo your task on group</code>"
+                       "<code>Redo your task on group Again</code>"
     elif (
         not config_dict["DM_MODE"]
         and message.chat.type != message.chat.type.SUPERGROUP

@@ -68,7 +68,7 @@ async def mirror_status(_, message):
     if count == 0:
         currentTime = get_readable_time(time() - bot_start_time) # type: ignore
         free = get_readable_file_size(disk_usage(config_dict["DOWNLOAD_DIR"]).free)
-        msg = "Stop it!\nGet some help!\n\nNo Active Tasks!\n\n"
+        msg = "No Active Tasks!\n\n"
         msg += f"Get your tasks status by adding me or user_id after cmd: /{BotCommands.StatusCommand[0]} me\n\n"
         msg += (
             f"\n<b>CPU:</b> {cpu_percent()}% | <b>FREE:</b> {free}"
@@ -128,7 +128,7 @@ async def status_pages(_, query):
         )
     ):
         await query.answer(
-            "You don't have any active tasks",
+            "error: user_id not in active task list!",
             show_alert=True
         )
         return
@@ -260,7 +260,7 @@ def bot_sys_stats():
     bmsg += f"S: {swap}% | "
     bmsg += f"D: {disk}%\n\n"
     bmsg += f"Bandwidth Used: {traf}\n"
-    bmsg += f"{def_media(BASE.encode()).decode()}"
+    bmsg += f"Zyradaex Leech Bot"
     return bmsg
 
 

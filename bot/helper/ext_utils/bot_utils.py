@@ -217,7 +217,7 @@ async def set_commands(client):
                 "ᴄʜᴇᴄᴋ ʙᴏᴛ ꜱᴛᴀᴛꜱ"
             ),
             BotCommand(
-                f"{BotCommands.CancelTaskCommand[0]}",
+                f"{BotCommands.CancelTaskCommand}",
                 "ᴄᴀɴᴄᴇʟ ᴀ ᴛᴀꜱᴋ"
             ),
             BotCommand(
@@ -247,7 +247,7 @@ async def get_telegraph_list(telegraph_content):
     path = [
         (
             await telegraph.create_page(
-                title="ᴢ-ᴍɪʀʀᴏʀ ᴅʀɪᴠᴇ ꜱᴇᴀʀᴄʜ",
+                title="Drive Search",
                 content=content
             )
         )["path"]

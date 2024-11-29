@@ -2686,6 +2686,15 @@ async def load_config():
                         "api_key": temp[1]
                     })
 
+    HIDE_TASK = environ.get(
+        "HIDE_TASK",
+        ""
+    )
+    if len(HIDE_TASK) == 0:
+        HIDE_TASK = 10
+    else:
+        HIDE_TASK = int(HIDE_TASK)
+
     config_dict.update(
         {
             "AUTO_DELETE_MESSAGE_DURATION": AUTO_DELETE_MESSAGE_DURATION,
@@ -2734,6 +2743,7 @@ async def load_config():
             "EXTENSION_FILTER": EXTENSION_FILTER,
             "FILELION_API": FILELION_API,
             "GDRIVE_ID": GDRIVE_ID,
+            "HIDE_TASK": HIDE_TASK,
             "INCOMPLETE_TASK_NOTIFIER": INCOMPLETE_TASK_NOTIFIER,
             "INDEX_URL": INDEX_URL,
             "IS_TEAM_DRIVE": IS_TEAM_DRIVE,

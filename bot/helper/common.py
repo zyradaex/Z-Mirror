@@ -195,10 +195,10 @@ class TaskConfig:
 
     async def set_mode(self):
         mode = (
-            "Telegram"
+            "Leech"
             if self.is_leech
             else
-            "RcDrive"
+            "Rclone"
             if (
                 self.up_dest == "rc" or
                 self.up_dest == "rcl" or
@@ -206,7 +206,7 @@ class TaskConfig:
                 is_rclone_path(str(self.up_dest)) == True
             )
             else
-            "GDrive" if (
+            "Mirror" if (
                 self.is_clone or
                 self.up_dest == "gd" or
                 self.up_dest == "gdl" or
@@ -218,9 +218,9 @@ class TaskConfig:
         )
 
         if self.compress:
-            mode += " as Zip"
+            mode += " (Zip)"
         elif self.extract:
-            mode += " as Unzip"
+            mode += " (Unzip)"
         self.mode = mode
 
 
